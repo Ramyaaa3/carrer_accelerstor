@@ -1,0 +1,563 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #fff;
+    min-height: 100vh;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.nav-links li {
+    margin: 0 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.blink-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: #007bff;
+    border-radius: 50%;
+    margin-left: 5px;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.login-btn {
+    padding: 8px 20px;
+    background: rgba(138, 43, 226, 0.2);
+    border: 1px solid rgba(138, 43, 226, 0.5);
+    color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.login-btn:hover {
+    background: rgba(138, 43, 226, 0.4);
+}
+
+.hero {
+    padding: 150px 50px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    opacity: 0.8;
+}
+
+.linkedin-check {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.linkedin-check h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.linkedin-check p {
+    font-size: 1rem;
+    opacity: 0.7;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.input-group input {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    width: 70%;
+}
+
+.input-group button {
+    padding: 10px 30px;
+    background: #007bff;
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.input-group button:hover {
+    background: #0056b3;
+}
+
+.companies {
+    padding: 50px;
+    text-align: center;
+}
+
+.companies h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.companies p {
+    font-size: 1.1rem;
+    opacity: 0.7;
+    margin-bottom: 30px;
+}
+
+.marquee {
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 20px 0;
+}
+
+.marquee img {
+    margin: 0 20px;
+    height: 50px;
+}
+
+.left-to-right {
+    animation: marquee 15s linear infinite;
+}
+
+.right-to-left {
+    animation: marquee 15s linear infinite reverse;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.sets-apart {
+    padding: 50px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.sets-apart h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.sets-apart p {
+    font-size: 1.1rem;
+    opacity: 0.7;
+    margin-bottom: 30px;
+}
+
+.sets-apart button {
+    padding: 10px 30px;
+    background: #007bff;
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.sets-apart button:hover {
+    background: #0056b3;
+}
+
+.cards {
+    padding: 50px;
+    text-align: center;
+}
+
+.cards h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.cards p {
+    font-size: 1.1rem;
+    opacity: 0.7;
+    margin-bottom: 30px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: left;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1rem;
+    opacity: 0.7;
+}
+
+.card.large {
+    grid-column: span 2;
+    text-align: center;
+}
+
+.card.large h3 {
+    font-size: 2rem;
+}
+
+.card.large button {
+    padding: 10px 30px;
+    background: #007bff;
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.card.large button:hover {
+    background: #0056b3;
+}
+
+.job-listings {
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.job-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 300px;
+    text-align: center;
+}
+
+.job-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.job-card p {
+    font-size: 1rem;
+    opacity: 0.7;
+    margin-bottom: 20px;
+}
+
+.job-card button {
+    padding: 10px 20px;
+    background: #007bff;
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.job-card button:hover {
+    background: #0056b3;
+}
+
+.testimonials {
+    padding: 50px;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.testimonials p {
+    font-size: 1.1rem;
+    opacity: 0.7;
+    margin-bottom: 30px;
+}
+
+.testimonial-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.testimonial {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 300px;
+    text-align: center;
+}
+
+.testimonial img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.testimonial h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.testimonial p {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    margin-bottom: 10px;
+}
+
+.testimonial video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.faq {
+    padding: 50px;
+    text-align: center;
+}
+
+.faq h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.faq-item {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin: 0 auto 20px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.faq-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.faq-item p {
+    font-size: 1rem;
+    opacity: 0.7;
+}
+
+.contact {
+    padding: 50px;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.contact p {
+    font-size: 1.1rem;
+    opacity: 0.7;
+    margin-bottom: 30px;
+}
+
+.email-btn {
+    padding: 10px 30px;
+    background: rgba(138, 43, 226, 0.2);
+    border: 1px solid rgba(138, 43, 226, 0.5);
+    color: #fff;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.email-btn:hover {
+    background: rgba(138, 43, 226, 0.4);
+}
+
+footer {
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.05);
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto 30px;
+    text-align: left;
+}
+
+.footer-left h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.footer-left p {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    max-width: 400px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 50px;
+}
+
+.footer-links a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    opacity: 0.7;
+}
+
+.footer-links a:hover {
+    opacity: 1;
+}
+
+footer > p {
+    font-size: 0.8rem;
+    opacity: 0.5;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    z-index: 1000;
+}
+
+.modal h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.modal input {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    width: 80%;
+}
+
+.modal button {
+    padding: 10px 30px;
+    background: #007bff;
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.modal button:hover {
+    background: #0056b3;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* Add this to the existing styles.css */
+.input-group {
+    display: flex;
+    gap: 25px;
+    justify-content: center;height: 15px;
+    position: relative;
+}
+
+.linkedin-icon {
+    position: absolute;
+    left: 15px;
+    top: 60%;
+    transform: translateY(-60%);
+    color: #007bff;
+    font-size: 1.2rem;
+}
+
+.input-group input {
+    padding: 20px 20px 10px 40px; /* Add padding to the left to make space for the icon */
+    border: none;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    width: 70%;
+}
